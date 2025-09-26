@@ -107,10 +107,10 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="hover:text-blue-400 transition-colors">HOME</a>
-                <a href="" class="hover:text-blue-400 transition-colors">ABOUT US</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">WORKS</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">CONTACT US</a>
+                <a href="{{ route('home') }}" class="hover:text-blue-400 transition-colors">HOME</a>
+                <a href="{{ route('about') }}" class="hover:text-blue-400 transition-colors">ABOUT US</a>
+                <a href="{{ route('works') }}" class="hover:text-blue-400 transition-colors">WORKS</a>
+                <a href="{{ route('contact') }}" class="hover:text-blue-400 transition-colors">CONTACT US</a>
                 <a href="{{ route('login') }}"
                     class="bg-blue-400 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-500 transition-colors">
                     SIGN IN

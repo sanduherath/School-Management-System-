@@ -134,7 +134,7 @@
                     </form>
 
                     <div class="mt-6 text-center">
-                        <a href="{{ url()->previous() }}" class="text-blue-100 hover:text-white hover:underline">&larr; Back</a>
+                        <a href="{{ route('home') }}" class="text-blue-100 hover:text-white hover:underline">&larr; Back</a>
                     </div>
                 </div>
             </div>

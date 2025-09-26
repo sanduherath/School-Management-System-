@@ -74,10 +74,10 @@
 
 <body class="font-sans bg-blue-500">
     <!-- Header -->
-    <header class="bg-blue-600 text-white py-2 text-sm rounded-t-lg">
+    <header class="bg-blue-400 text-white py-2 text-sm rounded-t-lg">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-blue-200">
-                IMPIC COVID-19 Student Policy Update
+
             </div>
             <div class="flex items-center space-x-6">
                 <span class="flex items-center">
@@ -94,29 +94,27 @@
                     </svg>
                     hello@example.com
                 </span>
-                <span>Mon - Fri: 08:00 - 17:00</span>
             </div>
         </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-blue-700 text-white py-4 shadow-lg sticky top-0 z-50">
+    <nav class="bg-blue-500 text-white py-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="text-blue-300 text-2xl font-bold mr-2">📚</div>
-                <div class="text-xl font-bold">CAMPUSA</div>
+            <div class="flex items-center pl-4">
+                <div class="text-blue-300 text-2xl font-bold mr-2"></div>
+                <div class="text-xl font-bold">Crestview College</div>
             </div>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="/" class="hover:text-blue-400 transition-colors">HOME</a>
-                <a href="/about" class="hover:text-blue-400 transition-colors text-blue-400">ABOUT US</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">SERVICE</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">WORKS</a>
-                <a href="#" class="hover:text-blue-400 transition-colors">CONTACT US</a>
-                <button
+                <a href="{{ route('home') }}" class="hover:text-blue-400 transition-colors">HOME</a>
+                <a href="{{ route('about') }}" class="hover:text-blue-400 transition-colors">ABOUT US</a>
+                <a href="{{ route('works') }}" class="hover:text-blue-400 transition-colors">WORKS</a>
+                <a href="{{ route('contact') }}" class="hover:text-blue-400 transition-colors">CONTACT US</a>
+                <a href="{{ route('login') }}"
                     class="bg-blue-400 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-500 transition-colors">
-                    APPLY NOW
-                </button>
+                    SIGN IN
+                </a>
             </div>
 
             <!-- Mobile menu button -->
@@ -160,11 +158,14 @@
                 </p>
             </div>
         </div>
-              <div class="grid lg:grid-cols-2 gap-16 items-center mb-16 ml-16 pl-8">"bg-white py-16">
+    </section>
+
+    <!-- About Content Section -->
+    <section class="bg-white py-16">
         <div class="container mx-auto px-8">
             <!-- Our Story -->
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
-                <div class="animate-slide-in-left">
+                <div class="animate-slide-in-left ml-16">
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
                     <p class="text-gray-600 text-lg leading-relaxed mb-4">
                         Founded in 1985, CAMPUSA has been at the forefront of educational excellence for over three
@@ -189,78 +190,92 @@
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-blue-600">500+</div>
-                            <div class="text-gra                        <div class="bg-blue-100 rounded-lg p-6 max-w-md mx-auto shadow-xl">          </div>
-                </div>
-              schoolss="animate-fade-in-up">
-                                         class="w-full h-64 object-cover rounded-lg shadow-lg mb-4">
-                            <di class="text-center">
-                                <h class="text-2xl font-bold text-blue-700 mb-2">A Place to Grow</h3>                                <p class="text-gray-700 text-base >
-                                    Ou vibrant campus is designed to inspire learning, foster collaboration, and support every student's journey. Experience state-of-the-art facilities, beautiful green spaces, and a welcoming community.
-                                </p
-                            </div
-                        </div>>>rp3vs="bg-blue-100 rounded-lg                      <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
-                            <div class="text-2xl font-bold">🎓</div>
+                            <div class="text-gray-600">Faculty</div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Mission & Vision -->
-            <div class="grid lg:grid-cols-2 gap-16 mb-16">
-                <div class="bg-blue-50 p-8 rounded-lg animate-slide-in-left">
-                    <div class="text-blue-600 text-4xl mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        To provide transformative educational experiences that empower students to become
-                        innovative leaders, critical thinkers, and responsible global citizens who contribute
-                        positively to society and drive meaningful change in their communities.
-                    </p>
-                </div>
-                <div class="bg-blue-50 p-8 rounded-lg animate-fade-in-up">
-                    <div class="text-blue-600 text-4xl mb-4">👁️</div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        To be recognized as a premier institution of higher learning that sets the standard
-                        for educational excellence, innovation, and inclusivity, preparing students for
-                        success in an ever-evolving global landscape.
-                    </p>
+                <div class="animate-fade-in-up flex justify-center">
+                    <div class="bg-blue-100 rounded-lg p-4 max-w-md md:max-w-lg lg:max-w-xl w-[450px]">
+                        <img src="{{ asset('images/school.png') }}" alt="University Campus"
+                            class="w-full rounded-lg shadow object-cover h-64 md:h-80 lg:h-96">
+                    </div>
                 </div>
             </div>
+        </div>
+        </div>
 
-            <!-- Our Values -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Core Values</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
-                    These fundamental principles guide everything we do and shape the character of our institution.
+        <!-- Mission & Vision -->
+        <div class="grid lg:grid-cols-2 gap-16 m-16 mb-16">
+            <div class="bg-blue-200 p-8 rounded-lg animate-slide-in-left">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    To provide transformative educational experiences that empower students to become
+                    innovative leaders, critical thinkers, and responsible global citizens who contribute
+                    positively to society and drive meaningful change in their communities.
                 </p>
             </div>
+            <div class="bg-blue-200 p-8 rounded-lg animate-fade-in-up">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    To be recognized as a premier institution of higher learning that sets the standard
+                    for educational excellence, innovation, and inclusivity, preparing students for
+                    success in an ever-evolving global landscape.
+                </p>
+            </div>
+        </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div
-                    class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up">
-                    <div class="text-blue-600 text-5xl mb-4">💡</div>
-                    <h4 class="text-xl font-bold text-gray-800 mb-3">Innovation</h4>
-                    <p class="text-gray-600">Embracing new ideas and cutting-edge approaches to education and research.
-                    </p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
-                    style="animation-delay: 0.1s;">
-                    <div class="text-blue-600 text-5xl mb-4">🤝</div>
-                    <h4 class="text-xl font-bold text-gray-800 mb-3">Integrity</h4>
-                    <p class="text-gray-600">Maintaining the highest standards of honesty, ethics, and transparency.
-                    </p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
-                    style="animation-delay: 0.2s;">
-                    <div class="text-blue-600 text-5xl mb-4">🌍</div>
-                    <h4 class="text-xl font-bold text-gray-800 mb-3">Inclusivity</h4>
-                    <p class="text-gray-600">Creating a welcoming environment where diversity is celebrated and valued.
-                    </p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
-                    style="animation-delay: 0.3s;">
-                    <div class="text-blue-600 text-5xl mb-4">⭐</div>
-                    <h4 class="tentry.target.style.animationPlayState = 'running';
+        <!-- Our Values -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Core Values</h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+                class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up">
+                <div class="text-blue-600 text-5xl mb-4">💡</div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Innovation</h4>
+                <p class="text-gray-600">Embracing new ideas and cutting-edge approaches to education and research.</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                <div class="text-blue-600 text-5xl mb-4">🤝</div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Integrity</h4>
+                <p class="text-gray-600">Maintaining the highest standards of honesty, ethics, and transparency.</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
+                style="animation-delay: 0.2s;">
+                <div class="text-blue-600 text-5xl mb-4">🌍</div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Inclusivity</h4>
+                <p class="text-gray-600">Creating a welcoming environment where diversity is celebrated and valued.</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in-up"
+                style="animation-delay: 0.3s;">
+                <div class="text-blue-600 text-5xl mb-4">⭐</div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">Excellence</h4>
+                <p class="text-gray-600">Striving for the highest quality in all aspects of education and service.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
                     }
                 });
             }, observerOptions);
@@ -271,6 +286,10 @@
             });
         });
     </script>
+    <!-- Copyright -->
+    <div class="text-center text-gray-100 text-sm py-4">
+        © {{ date('Y') }} CAMPUSA University. All rights reserved.
+    </div>
 </body>
 
 </html>
