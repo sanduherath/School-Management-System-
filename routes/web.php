@@ -33,12 +33,26 @@ Route::post('/contact/send', function (Request $request) {
     return redirect()->back()->with('status', 'Thanks — your message has been received.');
 })->name('contact.send');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified',
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+
+use App\Http\Controllers\StudentController;
+
+// Student Routes
+Route::middleware(['auth', 'verified'])->prefix('student')->name('student.')->group(function () {
+    Route::get('/dashboard', [StudentController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile', [StudentController::class, 'profile'])->name('profile');
+    Route::get('/timetable', [StudentController::class, 'timetable'])->name('timetable');
+    Route::get('/attendance', [StudentController::class, 'attendance'])->name('attendance');
+    Route::get('/exams', [StudentController::class, 'exams'])->name('exams');
+    Route::get('/calendar', [StudentController::class, 'calendar'])->name('calendar');
+    Route::get('/assignments', [StudentController::class, 'assignments'])->name('assignments');
+    Route::get('/notices', [StudentController::class, 'notices'])->name('notices');
 });
