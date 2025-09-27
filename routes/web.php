@@ -41,4 +41,52 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    // Role-specific dashboards
+    Route::get('/student/dashboard', function () {
+        return view('student.dashboard');
+    })->name('student.dashboard');
+
+    // Student profile
+    Route::get('/student/profile', function () {
+        return view('student.profile');
+    })->name('student.profile');
+
+    // Student timetable
+    Route::get('/student/timetable', function () {
+        return view('student.timetable');
+    })->name('student.timetable');
+
+    // Student attendance
+    Route::get('/student/attendance', function () {
+        return view('student.attendance');
+    })->name('student.attendance');
+
+    // Student exams
+    Route::get('/student/exams', function () {
+        return view('student.exams');
+    })->name('student.exams');
+
+    // Student calendar
+    Route::get('/student/calendar', function () {
+        return view('student.calendar');
+    })->name('student.calendar');
+
+    // Student assignments
+    Route::get('/student/assignments', function () {
+        return view('student.assignments');
+    })->name('student.assignments');
+
+    // Student notices
+    Route::get('/student/notices', function () {
+        return view('student.notices');
+    })->name('student.notices');
+
+    Route::get('/teacher/dashboard', function () {
+        return view('teacher.dashboard');
+    })->name('teacher.dashboard');
+
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
 });

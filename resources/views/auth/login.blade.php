@@ -82,7 +82,7 @@
             <!-- Right: Login card -->
             <div class="flex items-center justify-center w-[400px]">
                 <div
-                    class="w-full max-w-lg bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-10 shadow-xl animate-pop-in">
+                    class="w-full max-w-lg bg-white bg-opacity-12 backdrop-blur-md rounded-2xl p-8 shadow-xl animate-pop-in border border-white/10">
                     <div class="text-center mb-6">
                         <h2 class="text-2xl font-bold text-white">Sign in</h2>
                         <p class="text-blue-100">Enter your credentials to continue</p>
@@ -109,13 +109,13 @@
                             <label for="email" class="block text-blue-100 mb-2">Email</label>
                             <input id="email" name="email" type="email" value="{{ old('email') }}" required
                                 autofocus
-                                class="w-full px-4 py-3 rounded bg-white bg-opacity-20 text-white placeholder-blue-200 border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-300" />
+                                class="w-full px-4 py-3 rounded bg-white bg-opacity-6 text-white placeholder-blue-200 border border-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
                         </div>
 
                         <div class="mb-4">
                             <label for="password" class="block text-blue-100 mb-2">Password</label>
                             <input id="password" name="password" type="password" required
-                                class="w-full px-4 py-3 rounded bg-white bg-opacity-20 text-white placeholder-blue-200 border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-300" />
+                                class="w-full px-4 py-3 rounded bg-white bg-opacity-6 text-white placeholder-blue-200 border border-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
                         </div>
 
                         <div class="flex items-center justify-between mb-6">
@@ -129,7 +129,7 @@
                         </div>
 
                         <button type="submit"
-                            class="w-full bg-white text-blue-600 font-semibold py-3 rounded hover:scale-105 transition-transform">Sign
+                            class="w-full bg-white text-indigo-600 font-semibold py-3 rounded hover:scale-105 transition-transform">Sign
                             In</button>
                     </form>
 

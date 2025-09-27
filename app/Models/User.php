@@ -27,6 +27,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        // role indicates user's high-level role within the system (student, teacher, admin)
+        'role',
     ];
 
     /**
@@ -58,4 +60,43 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Role constants
+     */
+    public const ROLE_STUDENT = 'student';
+    public const ROLE_TEACHER = 'teacher';
+    public const ROLE_ADMIN = 'admin';
+
+    /**
+     * Check if user has student role
+     */
+    public function isStudent(): bool
+    {
+        return $this->role === self::ROLE_STUDENT;
+    }
+
+    /**
+     * Check if user has teacher role
+     */
+    public function isTeacher(): bool
+    {
+        return $this->role === self::ROLE_TEACHER;
+    }
+
+    /**
+     * Check if user has admin role
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === self::ROLE_ADMIN;
+    }
+
+    /**
+     * Scope to filter by role
+     */
+    public function scopeOfRole($query, string $role)
+    {
+        return $query->where('role', $role);
+    }
 }
